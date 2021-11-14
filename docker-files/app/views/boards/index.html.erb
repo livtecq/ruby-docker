@@ -16,6 +16,7 @@
       <th></th>
     </tr>
   </thead>
+  <tbody>
     <% @boards.each do |board| %>
     <tr>
         <td><%= board.id %></td>
@@ -27,20 +28,7 @@
         <td><%= link_to '削除', board, class: 'btn btn-outline-dark', method: :delete %></td>
     </tr>
     <% end %>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>雑談掲示板</td>
-      <td>Taro</td>
-      <td>2018年4月1日</td>
-      <td>2018年4月15日</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>雑談掲示板2</td>
-      <td>Ken</td>
-      <td>2018年4月1日</td>
-      <td>2018年4月15日</td>
-    </tr>
   </tbody>
 </table>
+
+<%= paginate @boards %>
